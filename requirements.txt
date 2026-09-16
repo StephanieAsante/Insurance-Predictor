@@ -1,7 +1,4 @@
 pandas
-numpy
-plotly.express
 scikit-learn
 joblib
 streamlit
-pickle
