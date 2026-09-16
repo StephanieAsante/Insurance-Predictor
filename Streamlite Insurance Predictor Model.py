@@ -3,10 +3,11 @@
 
 # %%
 #v Load libraries for the process
-import joblib
 import pandas as pd
+import sklearn
+import joblib
 import streamlit as st
-import pickle
+
 
 # %%
 # Load the trained model
