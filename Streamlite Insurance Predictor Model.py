@@ -38,7 +38,7 @@ smoker = st.sidebar.selectbox('Smoker', ['Yes','No'])
 children = st.sidebar.slider("Number of Children", min_value=0, max_value=10, value=0, step=1)
 # ---- Define pages (generic sections) ----
 prediction_page = st.Page(
-    "pages/prediction_page", title="Insurance Prediction Page"
+    "pages/prediction_page.py", title="Insurance Prediction Page"
 )  # rename file to use underscore if possible
 pg = st.navigation([prediction_page], position="top") # Collects page objects into a menu, placing it in the sidebar (default) or top header (position="top").
 pg.run() # Executes and displays the UI code for whichever page the user currently selects. 
