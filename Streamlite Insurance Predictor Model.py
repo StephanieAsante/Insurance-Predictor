@@ -24,13 +24,14 @@ def predicition_page_logic():
             st.title('Insurance Claim Predictor')
             st.caption('Predict the future of claims and protect your bottom line with AI-driven foresight.Our insurance predictive model analyzes complex data patterns in real-time to forecast claim amount, detect high-risk anomalies,\
             and estimate potential payouts before they happen. Seamlessly transition from reactive processing to proactive risk management—all from a single, intuitive dashboard.')
-            st.write('**Your Model predicition goes here**')
+            st.write('----')
 
 # --- Side Bar description (Generic)----
 # Creates a header, then a slider below it
 # In sidebar, slider only accepst numerical values while selectbox/ radio is for strings or characte values
 st.sidebar.header('Medical  & Personal Information')
-age = st.sidebar.slider('Age', min_value=18, max_value=100, value=30) #  The initial default value when the app loads.
+st.subheader("📋 Enter Claim Details")
+age = st.sidebar.slider('Age of Policy Holder', min_value=18, max_value=100, value=30) #  The initial default value when the app loads.
 gender = st.sidebar.selectbox('Gender', ['male', 'female'])
 bmi = st.sidebar.slider('BMI', min_value = 1, max_value = 150, value = 50)
 bloodpressure = st.sidebar.slider('Blood Pre ssure', min_value = 40, max_value = 250, value = 70)
