@@ -20,7 +20,7 @@ scaler_insurance = joblib.load('scaler.pkl')
 st.set_page_config(page_title= 'Insurance Claim Predictor', layout= 'wide')
 
 # ---- Title and Description -----
-def predicition_page_logic():
+def prediction_page_logic():
             st.title('Insurance Claim Predictor')
             st.caption('Predict the future of claims and protect your bottom line with AI-driven foresight.Our insurance predictive model analyzes complex data patterns in real-time to forecast claim amount, detect high-risk anomalies,\
             and estimate potential payouts before they happen. Seamlessly transition from reactive processing to proactive risk management—all from a single, intuitive dashboard.')
