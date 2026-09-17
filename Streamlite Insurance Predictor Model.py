@@ -20,9 +20,11 @@ scaler_insurance = joblib.load('scaler.pkl')
 st.set_page_config(page_title= 'Insurance Claim Predictor', layout= 'wide')
 
 # ---- Title and Description -----
-st.title('Insurance Claim Predictor')
-st.caption('Predict the future of claims and protect your bottom line with AI-driven foresight.Our insurance predictive model analyzes complex data patterns in real-time to forecast claim amount, detect high-risk anomalies,\
+def predicition_page_logic():
+            st.title('Insurance Claim Predictor')
+            st.caption('Predict the future of claims and protect your bottom line with AI-driven foresight.Our insurance predictive model analyzes complex data patterns in real-time to forecast claim amount, detect high-risk anomalies,\
             and estimate potential payouts before they happen. Seamlessly transition from reactive processing to proactive risk management—all from a single, intuitive dashboard.')
+            st.write('**Your Model predicition goes here**')
 
 # --- Side Bar description (Generic)----
 # Creates a header, then a slider below it
@@ -38,9 +40,9 @@ smoker = st.sidebar.selectbox('Smoker', ['Yes','No'])
 children = st.sidebar.slider("Number of Children", min_value=0, max_value=10, value=0, step=1)
 # ---- Define pages (generic sections) ----
 prediction_page = st.Page(
-    "Streamlite Insurance Predictor Model.py", 
+    prediction_page_logic, 
     title="Insurance Prediction Page"
-)  # rename file to use underscore if possible
+)
 pg = st.navigation([prediction_page], position="top") # Collects page objects into a menu, placing it in the sidebar (default) or top header (position="top").
 pg.run() # Executes and displays the UI code for whichever page the user currently selects. 
 
